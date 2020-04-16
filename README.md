@@ -1,2 +1,2 @@
 Wireframe
-![Wireframe]('../src/assets/wireframe.png')
+![Wireframe]('./src/assets/wireframe.png')
