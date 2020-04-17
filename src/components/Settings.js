@@ -1,3 +1,5 @@
+// Settings component 
+
 import React, { Component } from 'react';
 
 class Setting extends Component {
