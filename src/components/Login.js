@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Aquarium from '../assets/artkoi2.png'
+import { Link } from 'react-router-dom'
 
 class Login extends Component {
     state = {}
@@ -16,7 +17,9 @@ class Login extends Component {
                     Password
                    <input type='text' name='name' />
                 </label>
-                New here?
+                <Link to='/signup'>
+                    New here?
+                </Link>
                 <input type="submit" value="Submit" />
             </form>
         </div>);
