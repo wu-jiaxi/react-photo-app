@@ -37,3 +37,18 @@
   top: 100px;
   color: white;
 }
+
+.login-form{
+  position: absolute;
+  top: 320px;
+  left: 900px;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  
+}
+
+.login__input-field{
+  display: flex;
+  flex-direction: column;
+}
