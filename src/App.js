@@ -32,6 +32,7 @@ class App extends React.Component {
   }
 }
 
+// picture and text details for Home component.
 const Home = () => (
   <div>
     <img className="koifish__picture" src={Aquarium} alt=""></img>
