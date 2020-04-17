@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import About from './components/About';
+import Login from './components/Login';
 import Pictures from './components/Pictures';
 import Settings from './components/Settings';
 import Favorites from './components/Favorites';
@@ -20,7 +20,7 @@ class App extends React.Component {
             <Navbar />
             <Switch>
               <Route path="/" exact component={Home} />
-              <Route path='/about' component={About} />
+              <Route path='/login' component={Login} />
               <Route path='/pictures' component={Pictures} />
               <Route path='/favorites' component={Favorites} />
               <Route path='/settings' component={Settings} />
