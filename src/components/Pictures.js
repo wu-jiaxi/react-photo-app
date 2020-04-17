@@ -4,7 +4,7 @@ class Picture extends Component {
     state = {  }
     render() { 
         return ( <div>
-            
+            <h1> Pictures </h1>
         </div> );
     }
 }
