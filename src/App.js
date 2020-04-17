@@ -13,6 +13,7 @@ class App extends React.Component {
 
   render() {
     return (
+      //using Router make paths from list items
       <Router>
         <div className="App">
           <header className="App-header">
