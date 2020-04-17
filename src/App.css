@@ -24,6 +24,8 @@
 
 .koifish__picture{
   position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .koifish__text{

@@ -5,7 +5,7 @@ class Home extends Component {
     state = {}
     render() {
         return (<div>
-            <img className="koifish__picture" src={Aquarium} alt="" width="1440px"></img>
+            <img className="koifish__picture" src={Aquarium} alt=""></img>
             <div className="koifish__text">
             <h1> Welcome to Striking Fish Photos! </h1>
             <h2> Here at Striking Fish Photos, we are dedicated </h2>
