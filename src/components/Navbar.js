@@ -1,7 +1,7 @@
 // Create a Navbar component
 
 // importing react component
-import React, { Component } from 'react';
+import React from 'react';
 //importing link
 import { Link } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ function Navbar() {
 
     return (
         <div className="navbar-container">
-            <ul class="navbar">
+            <ul className="navbar">
                 {/* list items used as links to different pages */}
                 <Link to='/' style={navStyle}>
                     <li className="navbar__list">Home</li>
