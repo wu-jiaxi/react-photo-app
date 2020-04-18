@@ -19,12 +19,13 @@ class Login extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state)
+        console.log("helloooo")
     }
 
     render() {
         return (<div>
             <img className="koifish__picture" src={Aquarium} alt=""></img>
-            <form className="login-form">
+            <form onSubmit={this.handleSubmit}  className="login-form" >
                 Sign In
                 <label className="login__input-field">
                     Email:
@@ -37,7 +38,7 @@ class Login extends Component {
                 <Link to='/signup'>
                     New here?
                 </Link>
-                <input type="submit" value="Sujkjkt" onSubmit={this.handleSubmit} />
+                <button> Login </button>
             </form>
         </div>);
     }
