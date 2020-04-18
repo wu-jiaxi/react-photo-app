@@ -20,7 +20,7 @@
   <div id="root"></div>
   <script>
     //web app's Firebase configuration
-    var firebaseConfig = {
+    var config = {
       apiKey: "AIzaSyBp_lSinM7BnSkE_Kxj2D79Y-U0fG7ZKWM",
       authDomain: "aquatic-photo-app.firebaseapp.com",
       databaseURL: "https://aquatic-photo-app.firebaseio.com",
@@ -30,7 +30,9 @@
       appId: "1:451942035589:web:09e87087b04126fb6339ec"
     };
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    db.settings({ timestampInSnapshots: true }); 
   </script>
 </body>
 
