@@ -8,12 +8,15 @@ class Login extends Component {
         password: ''
     }
 
-    handleChange = (e) =>{
-        console.log(e);
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
     }
 
     handleSubmit = (e) => {
-        console.log(e);
+        e.preventDefault();
+        console.log(this.state)
     }
 
     render() {
@@ -23,16 +26,16 @@ class Login extends Component {
                 Sign In
                 <label className="login__input-field">
                     Email:
-                   <input type='text' name='name' onChange={this.handleChange}/>
+                   <input type='text' name='name' onChange={this.handleChange} />
                 </label>
                 <label className="login__input-field">
                     Password
-                   <input type='text' name='password' onChange={this.handleChange}/>
+                   <input type='text' name='password' onChange={this.handleChange} />
                 </label>
                 <Link to='/signup'>
                     New here?
                 </Link>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" onChange={this.handleSubmit} />
             </form>
         </div>);
     }
