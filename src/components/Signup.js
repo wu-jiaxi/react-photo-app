@@ -15,7 +15,7 @@ class Signup extends Component {
                     Sign Up
                 <label className="login__input-field">
                         Email:
-                   <input type='text' name='email' placeholder="email" />
+                   <input type='text' name='email' placeholder="email" onChange={} />
                     </label>
                     <label className="login__input-field">
                         Password
