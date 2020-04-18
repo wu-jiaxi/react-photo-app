@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Aquarium from '../assets/artkoi2.png'
 import { Link } from 'react-router-dom'
+import fire from '../components/fire'
 
 class Login extends Component {
     state = {
@@ -12,7 +13,7 @@ class Login extends Component {
         this.setState({
             [e.target.id]: e.target.value
         })
-        console.log(e)
+        console.log(e.target.value)
     }
 
     handleSubmit = (e) => {
@@ -27,7 +28,7 @@ class Login extends Component {
                 Sign In
                 <label className="login__input-field">
                     Email:
-                   <input type='text' name='name' onChange={this.handleChange} />
+                   <input type='text' name='email' onChange={this.handleChange} />
                 </label>
                 <label className="login__input-field">
                     Password
@@ -36,7 +37,7 @@ class Login extends Component {
                 <Link to='/signup'>
                     New here?
                 </Link>
-                <input type="submit" value="Submit" onChange={this.handleSubmit} />
+                <input type="submit" value="Sujkjkt" onSubmit={this.handleSubmit} />
             </form>
         </div>);
     }
