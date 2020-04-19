@@ -10,20 +10,24 @@ class Signup extends Component {
         return (<div>
             <img className="koifish__picture" src={Aquarium} alt=""></img>
             {/* making container box */}
-            <div className="container"> 
+            <div className="container">
                 <form onSubmit={} className="login-form">
                     Sign Up
                 <label className="login__input-field">
-                        Email:
+                        First Name:
                    <input type='text' name='email' placeholder="email" onChange={} />
                     </label>
                     <label className="login__input-field">
-                        Password
-                   <input type='text' name='password' placeholder="password" />
+                        Last Name:
+                <input type='text' name='email' placeholder="email" onChange={} />
                     </label>
                     <label className="login__input-field">
-                        Date of Birth
-                   <input type='text' name='birth' placeholder="birth" />
+                        Email:
+                <input type='text' name='email' placeholder="email" onChange={} />
+                    </label>
+                    <label className="login__input-field">
+                        Password
+                <input type='text' name='password' placeholder="password" />
                     </label>
                     <input type="submit" value="Submit" />
                 </form>
