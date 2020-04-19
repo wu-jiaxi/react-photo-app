@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import Aquarium from '../assets/artkoi2.png'
 import { Link } from 'react-router-dom'
+import 
 import fire from '../components/fire'
 
 class Login extends Component {
     state = {
         email: '',
-        password: ''
+        password: '',
+        firstName: '',
+        lastName: ''
     }
 
     handleChange = (e) => {
@@ -32,8 +35,16 @@ class Login extends Component {
                    <input type='text' name='email' onChange={this.handleChange} />
                 </label>
                 <label className="login__input-field">
-                    Password
+                    Password:
                    <input type='text' name='password' onChange={this.handleChange} />
+                </label>
+                <label className="login__input-field">
+                   First Name:
+                   <input type='text' name='first name' onChange={this.handleChange} />
+                </label>
+                <label className="login__input-field">
+                    Email:
+                   <input type='text' name='last name' onChange={this.handleChange} />
                 </label>
                 <Link to='/signup'>
                     New here?
