@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import Aquarium from '../assets/artkoi2.png'
 
 class Signup extends Component {
+<<<<<<< HEAD
     state = {
 
     }
 
-    handleChange = (e) =>{
+    handleChange = (e) => {
         console.log(e);
     }
 
@@ -18,7 +19,7 @@ class Signup extends Component {
         return (<div>
             <img className="koifish__picture" src={Aquarium} alt=""></img>
             {/* making container box */}
-            <div className="container"> 
+            <div className="container">
                 <form className="login-form">
                     Sign Up
                 <label className="login__input-field">
@@ -33,9 +34,10 @@ class Signup extends Component {
                         Date of Birth
                    <input type='text' name='birth' placeholder="birth" onChange={this.handleChange} />
                     </label>
-                    <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
+                    <input type="submit" value="Submit" onSubmit={this.handleSubmit} />
                 </form>
             </div>
+
         </div>);
     }
 }
