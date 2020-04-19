@@ -1,10 +1,15 @@
-const http = require('http');
+const express = require('express');
 
-const server = http.createServer((request, response) => {
-    console.log('headers', request.headers)
-    console.log('method', request.method)
-    response.setHeader('Content-Type', 'text/html');
-    response.end('<h1>HElllo</h1>');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('this is working')
 })
 
-server.listen(3009)
+app.post('/signin', (req, res) => {
+    res.json('signin')
+})
+
+app.listen(3009, () => {
+    console.log('app is running on port 3000')
+});
