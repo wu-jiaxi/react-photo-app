@@ -6,13 +6,6 @@ class Signup extends Component {
 
     }
 
-    handleChange = (e) => {
-        console.log(e);
-    }
-
-    handleSubmit = (e) => {
-        console.log(e);
-    }
 
     render() {
         return (<div>
@@ -23,17 +16,17 @@ class Signup extends Component {
                     Sign Up
                 <label className="login__input-field">
                         Email:
-                   <input type='text' name='email' placeholder="email" onChange={this.handleChange} />
+                   <input type='text' name='email' placeholder="email" />
                     </label>
                     <label className="login__input-field">
                         Password
-                   <input type='text' name='password' placeholder="password" onChange={this.handleChange} />
+                   <input type='text' name='password' placeholder="password"  />
                     </label>
                     <label className="login__input-field">
                         Date of Birth
-                   <input type='text' name='birth' placeholder="birth" onChange={this.handleChange} />
+                   <input type='text' name='birth' placeholder="birth"  />
                     </label>
-                    <input type="submit" value="Submit" onSubmit={this.handleSubmit} />
+                    <input type="submit" value="Submit" />
                 </form>
             </div>
 
