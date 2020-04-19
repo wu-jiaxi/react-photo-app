@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Aquarium from '../assets/artkoi2.png'
 
 class Signup extends Component {
-<<<<<<< HEAD
     state = {
 
     }
