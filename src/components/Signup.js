@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Aquarium from '../assets/artkoi2.png'
 
-
 class Signup extends Component {
+<<<<<<< HEAD
     state = {
 
     }
@@ -37,9 +37,30 @@ class Signup extends Component {
                     <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
                 </form>
             </div>
+=======
+    state = {}
+    render() {
+        return (<div>
+             <img className="koifish__picture" src={Aquarium} alt=""></img>
+             <form className="login-form">
+                Sign Up
+                <label className="login__input-field">
+                    Email:
+                   <input type='text' name='name' />
+                </label>
+                <label className="login__input-field">
+                    Password
+                   <input type='text' name='name' />
+                </label>
+                <label className="login__input-field">
+                    Date of Birth
+                   <input type='text' name='name' />
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
+>>>>>>> parent of fdfbb25... signup.js container
         </div>);
     }
 }
 
 export default Signup;
-

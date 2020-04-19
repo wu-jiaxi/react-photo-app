@@ -9,7 +9,6 @@ import Aquarium from '../src/assets/koifish.jpg';
 import Signup from './components/Signup';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-
 class App extends React.Component {
 
 
