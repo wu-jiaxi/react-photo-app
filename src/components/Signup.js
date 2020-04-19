@@ -6,30 +6,35 @@ class Signup extends Component {
     state = {
 
     }
+
+    handleChange = (e) =>{
+        console.log(e);
+    }
+
+    handleSubmit = (e) => {
+        console.log(e);
+    }
+
     render() {
         return (<div>
             <img className="koifish__picture" src={Aquarium} alt=""></img>
             {/* making container box */}
-            <div className="container">
-                <form onSubmit={} className="login-form">
+            <div className="container"> 
+                <form className="login-form">
                     Sign Up
                 <label className="login__input-field">
-                        First Name:
-                   <input type='text' name='email' placeholder="email" onChange={} />
-                    </label>
-                    <label className="login__input-field">
-                        Last Name:
-                <input type='text' name='email' placeholder="email" onChange={} />
-                    </label>
-                    <label className="login__input-field">
                         Email:
-                <input type='text' name='email' placeholder="email" onChange={} />
+                   <input type='text' name='email' placeholder="email" onChange={this.handleChange} />
                     </label>
                     <label className="login__input-field">
                         Password
-                <input type='text' name='password' placeholder="password" />
+                   <input type='text' name='password' placeholder="password" onChange={this.handleChange} />
                     </label>
-                    <input type="submit" value="Submit" />
+                    <label className="login__input-field">
+                        Date of Birth
+                   <input type='text' name='birth' placeholder="birth" onChange={this.handleChange} />
+                    </label>
+                    <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
                 </form>
             </div>
         </div>);

@@ -6,7 +6,7 @@ import Pictures from './components/Pictures';
 import Settings from './components/Settings';
 import Favorites from './components/Favorites';
 import Aquarium from '../src/assets/koifish.jpg';
-import Signup from './components/Signup'
+import Signup from './components/Signup';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -26,6 +26,7 @@ class App extends React.Component {
               <Route path='/pictures' component={Pictures} />
               <Route path='/favorites' component={Favorites} />
               <Route path='/settings' component={Settings} />
+              <Route path='/login' component={Login} />
               <Route path='/signup' component={Signup} />
             </Switch>
           </header>

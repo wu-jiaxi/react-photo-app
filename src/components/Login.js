@@ -3,24 +3,39 @@ import Aquarium from '../assets/artkoi2.png'
 import { Link } from 'react-router-dom'
 
 class Login extends Component {
-    state = {}
+    state = {
+        email: '',
+        password: '',
+        firstName: '',
+        lastName: ''
+    }
+
+    
     render() {
         return (<div>
             <img className="koifish__picture" src={Aquarium} alt=""></img>
-            <form className="login-form">
+            <form onSubmit={this.handleSubmit}  className="login-form" >
                 Sign In
                 <label className="login__input-field">
                     Email:
-                   <input type='text' name='name' />
+                   <input type='text' name='email' onChange={this.handleChange} />
                 </label>
                 <label className="login__input-field">
-                    Password
-                   <input type='text' name='name' />
+                    Password:
+                   <input type='text' name='password' onChange={this.handleChange} />
+                </label>
+                <label className="login__input-field">
+                   First Name:
+                   <input type='text' name='first name' onChange={this.handleChange} />
+                </label>
+                <label className="login__input-field">
+                    Email:
+                   <input type='text' name='last name' onChange={this.handleChange} />
                 </label>
                 <Link to='/signup'>
                     New here?
                 </Link>
-                <input type="submit" value="Submit" />
+                <button> Login </button>
             </form>
         </div>);
     }
