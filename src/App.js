@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      route: 'login'
+      route: 'signin',
     }
   }
 
@@ -29,6 +29,10 @@ class App extends React.Component {
   }
 
 
+  onRouteChange = () => {
+    this.setState({ route: 'home' });
+    console.log("hellooo")
+  }
 
   render() {
     return (
@@ -39,7 +43,7 @@ class App extends React.Component {
 
             <Navbar />
             {this.state.route === 'signin'
-              ? <Login />
+              ? <Login onRouteChange={this.onRouteChange} />
               : <div>
                 <Switch>
 
