@@ -22,11 +22,6 @@ class Login extends Component {
         console.log(event.target.value)
     }
 
-    onRouteChange = () => {
-        this.setState({ route: 'home' });
-        console.log('hello')
-    }
-
 
     render() {
         return (<div>

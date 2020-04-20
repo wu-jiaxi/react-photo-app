@@ -38,7 +38,7 @@ class App extends React.Component {
           <header className="App-header">
 
             <Navbar onRouteChange={this.onRouteChange} />
-            {this.state.route === 'signin'
+            {this.state.route === 'login'
               ? <Login />
               : <div>
                 <Switch>
