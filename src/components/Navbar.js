@@ -6,8 +6,8 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 
-function Navbar() {
-    
+function Navbar({ onRouteChange}) {
+
     const navStyle = {
         color: 'white',
     }
@@ -32,6 +32,7 @@ function Navbar() {
                 <Link to='/settings' style={navStyle}>
                     <li className="navbar__list">Settings</li>
                 </Link>
+                
             </ul>
         </div>
     )

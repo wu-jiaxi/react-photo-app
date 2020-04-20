@@ -29,8 +29,8 @@ class App extends React.Component {
   }
 
 
-  onRouteChange = () => {
-    this.setState({ route: 'home' });
+  onRouteChange = (route) => {
+    this.setState({ route: route });
     console.log("hellooo")
   }
 
@@ -41,7 +41,7 @@ class App extends React.Component {
         <div className="App">
           <header className="App-header">
 
-            <Navbar />
+            <Navbar onRouteChange={this.onRouteChange} />
             {this.state.route === 'signin'
               ? <Login onRouteChange={this.onRouteChange} />
               : <div>
@@ -65,7 +65,7 @@ class App extends React.Component {
 
 // picture and text details for Home component.
 const Home = () => (
-  <div>
+  <div className="home__container">
     <img className="koifish__picture" src={Aquarium} alt=""></img>
     <div className="koifish__text">
       <h1> Welcome to Striking Fish Photos! </h1>

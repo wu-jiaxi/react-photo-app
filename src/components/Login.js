@@ -18,8 +18,8 @@ const Login = ({ onRouteChange }) => {
                 </label>
                 <Link to='/signup'>
                     New here?
-                </Link>
-                <input onClick={onRouteChange} type="submit" value="Sign in" />
+            </Link>
+                <button onClick={onRouteChange} type="submit" value="Sign in"> Login </button>
             </form>
 
         </div>
