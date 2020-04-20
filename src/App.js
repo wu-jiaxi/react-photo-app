@@ -9,6 +9,7 @@ import Aquarium from '../src/assets/koifish.jpg';
 import Signup from './components/Signup';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+
 class App extends React.Component {
   constructor() {
     super();
@@ -28,7 +29,9 @@ class App extends React.Component {
       .then(text => console.log(text))
   }
 
-
+  onRouteChange = () => {
+    this.setState({ route: 'home' });
+  }
 
   render() {
     return (
@@ -37,9 +40,9 @@ class App extends React.Component {
         <div className="App">
           <header className="App-header">
 
-            <Navbar onRouteChange={this.onRouteChange} />
+            <Navbar />
             {this.state.route === 'login'
-              ? <Login />
+              ? <Login onRouteChange={this.onRouteChange} />
               : <div>
                 <Switch>
 
