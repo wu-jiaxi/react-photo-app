@@ -33,7 +33,6 @@ function Navbar({ onRouteChange }) {
                 <Link to='/settings' style={navStyle}>
                     <li className="navbar__list">Settings</li>
                 </Link>
-                <Signout />
             </ul>
         </div>
     )

@@ -7,6 +7,7 @@ import Settings from './components/Settings';
 import Favorites from './components/Favorites';
 import Aquarium from '../src/assets/koifish.jpg';
 import Signup from './components/Signup';
+import Signout from './components/Signout'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -41,6 +42,7 @@ class App extends React.Component {
           <header className="App-header">
 
             <Navbar />
+            <Signout onRouteChange={this.onRouteChange} />
             {this.state.route === 'login'
               ? <Login onRouteChange={this.onRouteChange} />
               : <div>

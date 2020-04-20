@@ -18,7 +18,7 @@ const Login = ({ onRouteChange }) => {
             <Link to='/signup'>
                 New here?
             </Link>
-            <button onClick={onRouteChange}> Login </button>
+            <button onClick={() => onRouteChange('home')}> Login </button>
         </form>
     </div>);
 }
