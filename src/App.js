@@ -26,7 +26,7 @@ class App extends React.Component {
         'Accept': 'application/json'
       }
     })
-      .then(res => res.text())
+      .then(res => res.json())
       .then(text => console.log(text))
   }
 

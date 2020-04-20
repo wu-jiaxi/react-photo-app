@@ -1,26 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Aquarium from '../assets/artkoi2.png'
 import { Link } from 'react-router-dom'
 
-const Login = ({ onRouteChange }) => {
-    return (<div>
-        <img className="koifish__picture" src={Aquarium} alt=""></img>
-        <form className="login-form" >
-            Sign In
-            <label className="login__input-field">
-                Email:
-               <input type='text' name='email' />
-            </label>
-            <label className="login__input-field">
-                Password:
-               <input type='text' name='password' />
-            </label>
-            <Link to='/signup'>
-                New here?
-            </Link>
-            <button onClick={() => onRouteChange('home')}> Login </button>
-        </form>
-    </div>);
+class Login extends React.Component {
+    render() {
+        const { onRouteChange } = this.props;
+        return (<div>
+            <img className="koifish__picture" src={Aquarium} alt=""></img>
+            <form className="login-form" >
+                Sign In
+                <label className="login__input-field">
+                    Email:
+                   <input type='text' name='email' />
+                </label>
+                <label className="login__input-field">
+                    Password:
+                   <input type='text' name='password' />
+                </label>
+                <Link to='/signup'>
+                    New here?
+                </Link>
+                <button onClick={() => onRouteChange('home')}> Login </button>
+            </form>
+        </div>);
+    }
+
 }
 
 
