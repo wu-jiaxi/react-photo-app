@@ -10,6 +10,12 @@ import Signup from './components/Signup';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      route: 'login'
+    }
+  }
 
   componentDidMount() {
     fetch('http://localhost:3000/', {
@@ -22,22 +28,30 @@ class App extends React.Component {
       .then(text => console.log(text))
   }
 
+
+
   render() {
     return (
       //using Router make paths from list items
       <Router>
         <div className="App">
           <header className="App-header">
+
             <Navbar />
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path='/login' component={Login} />
-              <Route path='/pictures' component={Pictures} />
-              <Route path='/favorites' component={Favorites} />
-              <Route path='/settings' component={Settings} />
-              <Route path='/login' component={Login} />
-              <Route path='/signup' component={Signup} />
-            </Switch>
+            {this.state.route === 'signin'
+              ? <Login />
+              : <div>
+                <Switch>
+
+                  <Route path="/" exact component={Home} />
+                  <Route path='/login' component={Login} />
+                  <Route path='/pictures' component={Pictures} />
+                  <Route path='/favorites' component={Favorites} />
+                  <Route path='/settings' component={Settings} />
+                  <Route path='/signup' component={Signup} />
+                </Switch>
+              </div>
+            }
           </header>
         </div>
       </Router>

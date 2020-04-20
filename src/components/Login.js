@@ -7,7 +7,8 @@ class Login extends Component {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            route: ''
         }
     }
 
@@ -21,16 +22,16 @@ class Login extends Component {
         console.log(event.target.value)
     }
 
-    onSubmit = () => {
-        console.log(this.state)
-        this.props.onRouteChange('home')
+    onRouteChange = () => {
+        this.setState({ route: 'home' });
+        console.log('hello')
     }
 
 
     render() {
         return (<div>
             <img className="koifish__picture" src={Aquarium} alt=""></img>
-            <form onSubmit={this.onSubmit} className="login-form" >
+            <form className="login-form" >
                 Sign In
                 <label className="login__input-field">
                     Email:
@@ -43,7 +44,7 @@ class Login extends Component {
                 <Link to='/signup'>
                     New here?
                 </Link>
-                <button> Login </button>
+                <button onClick={this.onRouteChange}> Login </button>
             </form>
         </div>);
     }
