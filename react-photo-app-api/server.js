@@ -36,14 +36,6 @@ app.get('/', (req, res) => {
 
 //logs in if email and passwords match
 app.post('/signin', (req, res) => {
-    // Load hash from your password DB.
-    bcrypt.compare("apples", "$2a$10$Jt29tD/5bdPS8ckBvfhCa.p8KCUNiSw9Hrl4oVlr4rF6TlMeR7hE2", function (err, res) {
-        console.log("first guess", res)
-    });
-    bcrypt.compare("veggies", "$2a$10$Jt29tD/5bdPS8ckBvfhCa.p8KCUNiSw9Hrl4oVlr4rF6TlMeR7hE2", function (err, res) {
-        console.log("second guess", res)
-    });
-
     if (req.body.email === database.users[0].email &&
         req.body.password === database.users[0].password) {
         res.json('sucess');
