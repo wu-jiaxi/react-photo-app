@@ -29,8 +29,8 @@ class App extends React.Component {
       .then(text => console.log(text))
   }
 
-  onRouteChange = () => {
-    this.setState({ route: 'home' });
+  onRouteChange = (route) => {
+    this.setState({ route: route });
   }
 
   render() {

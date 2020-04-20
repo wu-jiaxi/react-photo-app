@@ -4,9 +4,10 @@
 import React from 'react';
 //importing link
 import { Link } from 'react-router-dom'
+import Signout from './Signout';
 
 
-function Navbar({ onRouteChange}) {
+function Navbar({ onRouteChange }) {
 
     const navStyle = {
         color: 'white',
@@ -32,7 +33,7 @@ function Navbar({ onRouteChange}) {
                 <Link to='/settings' style={navStyle}>
                     <li className="navbar__list">Settings</li>
                 </Link>
-                
+                <Signout />
             </ul>
         </div>
     )
