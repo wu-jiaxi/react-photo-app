@@ -3,26 +3,42 @@ import Aquarium from '../assets/artkoi2.png'
 import { Link } from 'react-router-dom'
 
 class Login extends Component {
-    state = {
-        email: '',
-        password: '',
-        firstName: '',
-        lastName: ''
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            password: ''
+        }
+    }
+
+    emailField = (event) => {
+        this.setState({ email: event.target.value })
+        console.log(event.target.value)
+    }
+
+    passwordField = (event) => {
+        this.setState({ password: event.target.value })
+        console.log(event.target.value)
+    }
+
+    onSubmit = () => {
+        console.log(this.state)
+        this.props.onRouteChange('home')
     }
 
 
     render() {
         return (<div>
             <img className="koifish__picture" src={Aquarium} alt=""></img>
-            <form onSubmit={this.handleSubmit} className="login-form" >
+            <form onSubmit={this.onSubmit} className="login-form" >
                 Sign In
                 <label className="login__input-field">
                     Email:
-                   <input type='text' name='email' onChange={this.handleChange} />
+                   <input type='text' name='email' onChange={this.emailField} />
                 </label>
                 <label className="login__input-field">
                     Password:
-                   <input type='text' name='password' onChange={this.handleChange} />
+                   <input type='text' name='password' onChange={this.passwordField} />
                 </label>
                 <Link to='/signup'>
                     New here?

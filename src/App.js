@@ -13,13 +13,13 @@ class App extends React.Component {
 
   componentDidMount() {
     fetch('http://localhost:3000/', {
-      headers : { 
+      headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
-       }
+      }
     })
-    .then(res => res.text())          
-    .then(text => console.log(text))
+      .then(res => res.text())
+      .then(text => console.log(text))
   }
 
   render() {
