@@ -30,10 +30,6 @@ class Signup extends Component {
                         Password:
                    <input type='text' name='password' placeholder="password" />
                     </label>
-                    <label className="login__input-field">
-                        Date of Birth:
-                   <input type='text' name='birth' placeholder="birth" />
-                    </label>
                     <input type="submit" value="Submit" />
                 </form>
             </div>
