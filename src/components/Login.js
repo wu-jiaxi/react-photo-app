@@ -24,14 +24,6 @@ class Login extends Component {
                     Password:
                    <input type='text' name='password' onChange={this.handleChange} />
                 </label>
-                <label className="login__input-field">
-                    First Name:
-                   <input type='text' name='first name' onChange={this.handleChange} />
-                </label>
-                <label className="login__input-field">
-                    Email:
-                   <input type='text' name='last name' onChange={this.handleChange} />
-                </label>
                 <Link to='/signup'>
                     New here?
                 </Link>

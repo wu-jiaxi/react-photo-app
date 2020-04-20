@@ -12,9 +12,14 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 class App extends React.Component {
 
   componentDidMount() {
-    fetch('http://localhost:55651')
-      .then(response => response.json())
-      .then(console.log)
+    fetch('http://localhost:3000/', {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    })
+    .then(res => res.text())          
+    .then(text => console.log(text))
   }
 
   render() {
