@@ -36,10 +36,10 @@ app.get('/', (req, res) => {
 })
 
 //logs in if email and passwords match
-app.post('/signin', (req, res) => {
+app.post('/login', (req, res) => {
     if (req.body.email === database.users[0].email &&
         req.body.password === database.users[0].password) {
-        res.json('sucess');
+        res.json('success');
     } else {
         res.status(400).json('error logging in')
     }
