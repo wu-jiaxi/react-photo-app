@@ -1,3 +1,6 @@
+// Creating paths for server requests
+// creating paths for signin, register, profile, and image likes
+
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -30,6 +33,7 @@ app.get('/', (req, res) => {
     res.send(database.users)
 })
 
+//logs in if email and passwords match
 app.post('/signin', (req, res) => {
     if (req.body.email === database.users[0].email &&
         req.body.password === database.users[0].password) {
@@ -39,6 +43,7 @@ app.post('/signin', (req, res) => {
     }
 })
 
+//registers users
 app.post('/register', (req, res) => {
     const { email, name, password } = req.body;
     database.users.push({
@@ -52,6 +57,7 @@ app.post('/register', (req, res) => {
     res.json(database.users[database.users.length - 1]);
 })
 
+//brings up profile according to id 
 app.get('/profile/:id', (req, res) => {
     const { id } = req.params;
     let found = false;
@@ -69,6 +75,7 @@ app.get('/profile/:id', (req, res) => {
     }
 })
 
+//keeps track of liked images 
 app.post('/image', (req, res) => {
     const { id } = req.body;
     let found = false;
@@ -84,6 +91,18 @@ app.post('/image', (req, res) => {
         res.status(400).json('not found');
     }
 })
+
+bcrypt.hash("bacon", null, null, function (err, hash) {
+    // Store hash in your password DB.
+});
+
+// Load hash from your password DB.
+bcrypt.compare("bacon", hash, function (err, res) {
+    // res == true
+});
+bcrypt.compare("veggies", hash, function (err, res) {
+    // res = false
+});
 
 app.listen(3009, () => {
     console.log('app is running on port 3000')
