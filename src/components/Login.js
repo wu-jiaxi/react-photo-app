@@ -53,10 +53,12 @@ class Login extends React.Component {
             <form className="login-form" >
                 Sign In
                 <label className="login__input-field">
+                email field text
                     Email:
                    <input onChange={this.onEmailChange} type='text' name='email' />
                 </label>
                 <label className="login__input-field">
+                password field text
                     Password:
                    <input onChange={this.onPasswordChange} type='text' name='password' />
                 </label>
