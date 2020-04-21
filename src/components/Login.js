@@ -1,3 +1,5 @@
+// login component that handles state for email and passowrd then on submit button check if password is a match and return data
+
 import React from 'react';
 import Aquarium from '../assets/artkoi2.png'
 import { Link } from 'react-router-dom'
@@ -6,20 +8,26 @@ class Login extends React.Component {
     constructor() {
         super();
         this.state = {
+            // state for email
             signInEmail: '',
+            // state for password
             signInPassword: ''
         }
     }
 
+    // function allows user input from keyboard for email box
     onEmailChange = (event) => {
         this.setState({ signInEmail: event.target.value })
     }
 
+    // function allows user input from keyboard for password box
     onPasswordChange = (event) => {
         this.setState({ signInPassword: event.target.value })
     }
 
+    // function allows user input from submit button for submit
     onSubmitSignIn = () => {
+        //get route to login from server
         fetch('http://localhost:3000/login', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
@@ -27,7 +35,8 @@ class Login extends React.Component {
                 email: this.state.signInEmail,
                 password: this.state.signInPassword
             })
-        })
+        })  
+            // when data 
             .then(response => response.json())
             .then(data => {
                 if (data === 'success') {
