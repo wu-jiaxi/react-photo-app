@@ -19,6 +19,7 @@ class App extends React.Component {
     }
   }
 
+  /* on page load go to localhost:3000  */
   componentDidMount() {
     fetch('http://localhost:3000/', {
       headers: {
@@ -26,10 +27,12 @@ class App extends React.Component {
         'Accept': 'application/json'
       }
     })
+      /* get data and console it  */
       .then(res => res.json())
       .then(text => console.log(text))
   }
 
+  /* changes state route to what returned route is  */
   onRouteChange = (route) => {
     this.setState({ route: route });
   }
@@ -40,9 +43,10 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <header className="App-header">
-
+            {/* imports navbar component  */}
             <Navbar />
             <Signout onRouteChange={this.onRouteChange} />
+            {/* if route is login then go to login else go to home */}
             {this.state.route === 'login'
               ? <Login onRouteChange={this.onRouteChange} />
               : <div>
