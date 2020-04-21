@@ -22,16 +22,19 @@ function Navbar({ onRouteChange }) {
                     <li className="navbar__list">Home</li>
                 </Link>
                 <Link to='/pictures' style={navStyle}>
-                link to pictures 
+              {/*   link to pictures  */}
                     <li className="navbar__list">Pictures</li>
                 </Link>
                 <Link to='/favorites' style={navStyle}>
+                {/* link to favorites */}
                     <li className="navbar__list">Favorites</li>
                 </Link>
                 <Link to='/login' style={navStyle}>
+                {/* link to login */}
                     <li className="navbar__list">Login</li>
                 </Link>
                 <Link to='/settings' style={navStyle}>
+               {/*  link to settings  */}
                     <li className="navbar__list">Settings</li>
                 </Link>
             </ul>
