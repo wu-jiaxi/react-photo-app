@@ -49,7 +49,7 @@ class Login extends React.Component {
         return (<div>
             {/* import pictures from aquarium component */}
             <img className="koifish__picture" src={Aquarium} alt=""></img>
-            form for email password 
+            {/* form for email password  */}
             <form className="login-form" >
                 Sign In
                 <label className="login__input-field">
