@@ -10,7 +10,7 @@ import Signup from './components/Signup';
 import Signout from './components/Signout'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-
+//2)code from udemy course 
 class App extends React.Component {
   constructor() {
     super();
@@ -44,6 +44,7 @@ class App extends React.Component {
         <div className="App">
           <header className="App-header">
             {/* imports navbar component  */}
+            {/*   1)code from https://www.youtube.com/watch?v=Law7wfdg_ls&t=585s */}
             <Navbar />
             <Signout onRouteChange={this.onRouteChange} />
             {/* if route is login then go to login else go to home */}
