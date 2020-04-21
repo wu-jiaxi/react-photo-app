@@ -47,6 +47,7 @@ class Login extends React.Component {
     // return form for sign in with email and password input field
     render() {
         return (<div>
+            {/* import pictures from aquarium component */}
             <img className="koifish__picture" src={Aquarium} alt=""></img>
             <form className="login-form" >
                 Sign In
