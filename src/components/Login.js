@@ -62,9 +62,11 @@ class Login extends React.Component {
                     Password:
                    <input onChange={this.onPasswordChange} type='text' name='password' />
                 </label>
+                {/* link to signup page  */}
                 <Link to='/signup'>
                     New here?
                 </Link>
+                submits the form for login 
                 <button onClick={this.onSubmitSignIn}> Login </button>
             </form>
         </div>);
