@@ -35,7 +35,7 @@ class Login extends React.Component {
                 email: this.state.signInEmail,
                 password: this.state.signInPassword
             })
-        })  
+        })
             // when data for email and password matches return success, if success is return go to route 'home'
             .then(response => response.json())
             .then(data => {
@@ -44,7 +44,7 @@ class Login extends React.Component {
                 }
             })
     }
-
+    // return form for sign in with email and password input field
     render() {
         return (<div>
             <img className="koifish__picture" src={Aquarium} alt=""></img>
