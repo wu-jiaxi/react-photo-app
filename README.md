@@ -65,3 +65,7 @@ Deleting Comments, Photos, and Users
 Resources used 
 https://www.youtube.com/watch?v=Law7wfdg_ls&t=585s
 used to understand routes, links and switches 
+
+
+https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8820894?start=480#overview
+udemy source Andrei Neagoie
