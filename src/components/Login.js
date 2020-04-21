@@ -36,7 +36,7 @@ class Login extends React.Component {
                 password: this.state.signInPassword
             })
         })  
-            // when data 
+            // when data for email and password matches return success, if success is return go to route 'home'
             .then(response => response.json())
             .then(data => {
                 if (data === 'success') {
