@@ -66,7 +66,7 @@ class Login extends React.Component {
                 <Link to='/signup'>
                     New here?
                 </Link>
-                submits the form for login 
+                {/* submits the form for login  */}
                 <button onClick={this.onSubmitSignIn}> Login </button>
             </form>
         </div>);
